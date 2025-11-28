@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "myfirstfabricmod",
+	"version": "${version}",
+	"name": "My First Fabric Mod",
+	"description": "This is my first fabric mod ever. Fabric rules, forge is poo. Fart.",
+	"authors": [
+		"PolaTheGreat"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/PolaTheGreatest/First-Fabric1.21.1-Mod"
+	},
+	"license": "MIT",
+	"icon": "assets/myfirstfabricmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.polathegreat.myfirstfabricmod.MyFirstFabricMod"
+		],
+		"fabric-datagen": [
+			"net.polathegreat.myfirstfabricmod.MyFirstFabricModDataGenerator"
+		],
+        "client": [
+          "net.polathegreat.myfirstfabricmod.MyFirstFabricModClient"
+        ]
+	},
+	"mixins": [
+		"myfirstfabricmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
