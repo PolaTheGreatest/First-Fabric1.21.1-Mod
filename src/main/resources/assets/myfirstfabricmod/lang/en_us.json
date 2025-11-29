@@ -1,0 +1,10 @@
+{
+  "item.myfirstfabricmod.pink_garnet": "Pink Garnet",
+  "item.myfirstfabricmod.raw_pink_garnet": "Raw Pink Garnet",
+
+  "block.myfirstfabricmod.pink_garnet_block": "Block of Pink Garnet",
+  "block.myfirstfabricmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
+
+  "itemgroup.myfirstfabricmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.myfirstfabricmod.pink_garnet_blocks": "Pink Garnet Blocks"
+}

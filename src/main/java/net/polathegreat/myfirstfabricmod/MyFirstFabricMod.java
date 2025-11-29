@@ -2,6 +2,9 @@ package net.polathegreat.myfirstfabricmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.polathegreat.myfirstfabricmod.block.ModBlocks;
+import net.polathegreat.myfirstfabricmod.item.ModItemGroups;
+import net.polathegreat.myfirstfabricmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +14,9 @@ public class MyFirstFabricMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.RegisterItemGroups();
 
+        ModItems.RegisterModItems();
+        ModBlocks.RegisterModBlocks();
 	}
 }
