@@ -5,6 +5,9 @@
   "block.myfirstfabricmod.pink_garnet_block": "Block of Pink Garnet",
   "block.myfirstfabricmod.raw_pink_garnet_block": "Block of Raw Pink Garnet",
 
+  "block.myfirstfabricmod.pink_garnet_ore": "Pink Garnet Ore",
+  "block.myfirstfabricmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
   "itemgroup.myfirstfabricmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.myfirstfabricmod.pink_garnet_blocks": "Pink Garnet Blocks"
 }

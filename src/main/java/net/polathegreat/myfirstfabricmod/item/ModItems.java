@@ -21,10 +21,5 @@ public class ModItems {
     // A method for the main class to call when registering items.
     public static void RegisterModItems() {
         MyFirstFabricMod.LOGGER.info("Registering mod items for " + MyFirstFabricMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-            entries.add(PINK_GARNET);
-            entries.add(RAW_PINK_GARNET);
-        });
     }
 }

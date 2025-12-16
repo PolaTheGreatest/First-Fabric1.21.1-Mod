@@ -3,6 +3,7 @@ package net.polathegreat.myfirstfabricmod.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -10,20 +11,35 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.polathegreat.myfirstfabricmod.MyFirstFabricMod;
 
 public class ModBlocks {
     // Register a new block
     public static final Block PINK_GARNET_BLOCK = RegisterBlock("pink_garnet_block",
             new Block(AbstractBlock.Settings.create()
-                    .strength(2.0f)
+                    .strength(4.0f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block RAW_PINK_GARNET_BLOCK = RegisterBlock("raw_pink_garnet_block",
             new Block(AbstractBlock.Settings.create()
-                    .strength(1.0f)
+                    .strength(3.0f)
                     .requiresTool()));
+
+    // Create experience dropping blocks for ore because they typically drop experience
+    public static final Block PINK_GARNET_ORE = RegisterBlock("pink_garnet_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create()
+                            .strength(3.0f)
+                            .requiresTool()));
+    public static final Block PINK_GARNET_DEEPSLATE_ORE = RegisterBlock("pink_garnet_deepslate_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+                    AbstractBlock.Settings.create()
+                            .strength(4.0f)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.DEEPSLATE)));
+
 
     // Helper method for registering an actual block.
     private static Block RegisterBlock(String name, Block block) {
@@ -40,10 +56,5 @@ public class ModBlocks {
     // A method for the main class to call when registering blocks.
     public static void RegisterModBlocks() {
         MyFirstFabricMod.LOGGER.info("Registering mod blocks for " + MyFirstFabricMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.PINK_GARNET_BLOCK);
-            entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
-        });
     }
 }

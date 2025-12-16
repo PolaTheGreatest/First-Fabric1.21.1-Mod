@@ -11,6 +11,7 @@ import net.polathegreat.myfirstfabricmod.MyFirstFabricMod;
 import net.polathegreat.myfirstfabricmod.block.ModBlocks;
 
 public class ModItemGroups {
+    // Creates a new item group (creative mode tab)
     public static final ItemGroup PINK_GARNET_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(MyFirstFabricMod.MOD_ID, "pink_garnet_items"),
             FabricItemGroup.builder()
@@ -30,6 +31,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
+                        entries.add(ModBlocks.PINK_GARNET_ORE);
+                        entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
                     })
                     .build());
 
